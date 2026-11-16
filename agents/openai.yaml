@@ -1,0 +1,4 @@
+interface:
+  display_name: "Codex Stakeholder Digest"
+  short_description: "Summarize material progress and risks from Codex chats"
+  default_prompt: "Use $codex-stakeholder-digest to summarize stakeholder-relevant activity from my Codex chats over the last 7 days."
