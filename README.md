@@ -1,6 +1,6 @@
 # Codex Stakeholder Digest
 
-Turn recent Codex conversations into a sourced stakeholder update. Defaults to the last **7 days** and accepts another period or a project restriction.
+Turn recent Codex conversations into a sourced stakeholder update or morning briefing. The standard digest defaults to the last **7 days**; morning mode uses the last **24 hours**.
 
 The digest covers material progress, outcomes, events, decisions, risks, assumptions, issues, dependencies, and upcoming commitments. It favors broad coverage of meaningful developments, groups related work, and filters trivial activity. Completed work, proposals, blockers, and unverified claims remain distinct.
 
@@ -29,7 +29,34 @@ Use $codex-stakeholder-digest for the last 14 days, focusing on Project Atlas.
 Use $codex-stakeholder-digest for November 1–15, 2026.
 ```
 
-The default scope includes all accessible Codex projects, pinned and archived chats, and older conversations with recent activity. The default period is a rolling seven-day interval ending when the request is received, interpreted in the user's timezone. The output is a bullet rundown with chat references and a coverage note.
+The default scope includes all accessible Codex projects, pinned and archived chats, and older conversations with recent activity. The standard digest uses a rolling seven-day interval ending when the request is received, interpreted in the user's timezone. The output is a bullet rundown with chat references and a coverage note.
+
+### Morning command
+
+Paste this into Codex each morning:
+
+```text
+$codex-stakeholder-digest morning
+```
+
+It uses only the last **24 hours of chat activity** and returns two sections, each grouped by topic/project:
+
+- **What I did yesterday (last 24 hours):** meaningful outcomes, progress, decisions, and findings. Any work from this morning is labeled accordingly.
+- **My focus today:** explicit plans labeled **Planned**, plus evidence-based inferences labeled **Likely focus**.
+
+Expect roughly 8–15 useful bullets total on a busy day, with fewer when there is less to report. Related work is combined; trivial activity and speculative tasks are omitted. This is a manual invocation, not a recurring schedule.
+
+You can narrow the scope or request calendar-day boundaries:
+
+```text
+$codex-stakeholder-digest morning for Project Atlas
+```
+
+```text
+$codex-stakeholder-digest morning using the previous calendar day
+```
+
+Morning mode includes recent activity in older chats but does not read earlier conversation content to reconstruct a backlog. Its exact window and any material coverage gaps appear in the briefing.
 
 ## History access
 
@@ -44,8 +71,11 @@ Retrieved chat content is treated as evidence, not instructions. The workflow re
 - [SKILL.md](SKILL.md): reporting workflow and selection criteria.
 - [agents/openai.yaml](agents/openai.yaml): skill name and default invocation shown in Codex.
 - [references/history-access.md](references/history-access.md): history retrieval details.
+- [references/morning.md](references/morning.md): daily window, focus inference, and two-section output.
 - [examples/AGENTS-snippet.md](examples/AGENTS-snippet.md): a standalone instruction block to append to your own `AGENTS.md` instead of installing the skill.
 
 ## Validation
 
 The skill passed the Codex skill-creator validator and a synthetic reporting trial covering duplicate updates, archived chats, deferred releases, missing-host coverage, and events outside the reporting window. History access was also exercised against a real seven-day corpus. This repository contains the reusable instructions; no user chat history or generated stakeholder report is included.
+
+Morning-mode trials checked changed plans, same-morning completions, explicit versus inferred priorities, teammate attribution, quiet days, and a previous calendar day spanning the daylight-saving transition.
