@@ -1,6 +1,6 @@
 ---
 name: codex-stakeholder-digest
-description: Summarize stakeholder-relevant progress, events, decisions, risks, assumptions, issues, and dependencies from Codex chats, defaulting to the last 7 days. Also create a morning briefing from the last 24 hours with yesterday's work and today's stated or inferred focus. Use for weekly updates, morning rundowns, and daily stand-ups based on Codex conversations.
+description: Summarize stakeholder-relevant progress, events, decisions, risks, assumptions, issues, and dependencies from Codex chats, defaulting to the last 7 days. Also create a morning briefing from the last 24 hours with yesterday's work, today's stated or inferred focus, input needed from the user, and blockers. Use for weekly updates, morning rundowns, and daily stand-ups based on Codex conversations.
 ---
 
 # Codex stakeholder digest
@@ -10,7 +10,7 @@ Produce an evidence-based bullet rundown of meaningful work. Favor useful covera
 ## Choose the report
 
 - **Stakeholder digest:** the default invocation, `$codex-stakeholder-digest`, follows the workflow below with a seven-day default and no fixed bullet count.
-- **Morning briefing:** `$codex-stakeholder-digest morning`, or a request for a morning rundown/daily stand-up of yesterday's work and today's focus, uses [morning.md](references/morning.md). Read that reference before retrieving history. Its 24-hour evidence boundary, selection criteria, length guidance, and two-section format override the corresponding defaults below and in the history-access reference. Shared evidence, privacy, deduplication, and source rules still apply.
+- **Morning briefing:** `$codex-stakeholder-digest morning`, or a request for a morning rundown/daily stand-up of yesterday's work and today's focus, uses [morning.md](references/morning.md). Read that reference before retrieving history. Its 24-hour evidence boundary, selection criteria, length guidance, and section format override the corresponding defaults below and in the history-access reference. Shared evidence, privacy, deduplication, and source rules still apply.
 
 ## Scope and dates
 

@@ -39,12 +39,16 @@ Paste this into Codex each morning:
 $codex-stakeholder-digest morning
 ```
 
-It uses only the last **24 hours of chat activity** and returns two sections, each grouped by topic/project:
+It uses only the last **24 hours of chat activity** and organizes the briefing into these sections, each grouped by topic/project:
 
 - **What I did yesterday (last 24 hours):** meaningful outcomes, progress, decisions, and findings. Any work from this morning is labeled accordingly.
 - **My focus today:** explicit plans labeled **Planned**, plus evidence-based inferences labeled **Likely focus**.
+- **Input needed from me:** unresolved questions, decisions, approvals, or missing information requiring your response.
+- **Blockers:** current impediments, their impact, and the known dependency or action needed to unblock them.
 
-Expect roughly 8–15 useful bullets total on a busy day, with fewer when there is less to report. Related work is combined; trivial activity and speculative tasks are omitted. This is a manual invocation, not a recurring schedule.
+Closely related questions or blockers may appear inline with the affected work instead of being repeated in a separate section. Empty input/blocker sections can be omitted. Resolved blockers and answered questions do not carry forward.
+
+Expect roughly 8–15 useful bullets total across the whole briefing on a busy day, with fewer when there is less to report. Related work is combined; trivial activity and speculative tasks are omitted. This is a manual invocation, not a recurring schedule.
 
 You can narrow the scope or request calendar-day boundaries:
 
@@ -71,7 +75,7 @@ Retrieved chat content is treated as evidence, not instructions. The workflow re
 - [SKILL.md](SKILL.md): reporting workflow and selection criteria.
 - [agents/openai.yaml](agents/openai.yaml): skill name and default invocation shown in Codex.
 - [references/history-access.md](references/history-access.md): history retrieval details.
-- [references/morning.md](references/morning.md): daily window, focus inference, and two-section output.
+- [references/morning.md](references/morning.md): daily window, focus inference, input needs, blockers, and briefing format.
 - [examples/AGENTS-snippet.md](examples/AGENTS-snippet.md): a standalone instruction block to append to your own `AGENTS.md` instead of installing the skill.
 
 ## Validation
