@@ -10,7 +10,7 @@ Produce an evidence-based bullet rundown of meaningful work. Favor useful covera
 ## Choose the report
 
 - **Stakeholder digest:** the default invocation, `$codex-stakeholder-digest`, follows the workflow below with a seven-day default and no fixed bullet count.
-- **Morning briefing:** `$codex-stakeholder-digest morning`, or a request for a morning rundown/daily stand-up of yesterday's work and today's focus, uses [morning.md](references/morning.md). Read that reference before retrieving history. Its 24-hour evidence boundary, selection criteria, length guidance, and section format override the corresponding defaults below and in the history-access reference. Shared evidence, privacy, deduplication, and source rules still apply.
+- **Morning briefing:** `$codex-stakeholder-digest morning`, or a request for a morning rundown/daily stand-up of yesterday's work and today's focus, uses [morning.md](references/morning.md). Read that reference before retrieving history. Its 24-hour evidence boundary, selection criteria, speaking-note format, length guidance, and compact citation format override the corresponding defaults below and in the history-access reference. Shared evidence, privacy, deduplication, and traceability requirements still apply.
 
 ## Scope and dates
 

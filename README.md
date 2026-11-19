@@ -41,14 +41,16 @@ $codex-stakeholder-digest morning
 
 It uses only the last **24 hours of chat activity** and organizes the briefing into these sections, each grouped by topic/project:
 
-- **What I did yesterday (last 24 hours):** meaningful outcomes, progress, decisions, and findings. Any work from this morning is labeled accordingly.
-- **My focus today:** explicit plans labeled **Planned**, plus evidence-based inferences labeled **Likely focus**.
+- **What I did yesterday:** meaningful outcomes, progress, decisions, and findings. Work from today is labeled accurately.
+- **My focus today:** explicit plans labeled **Planned**, plus evidence-based inferences labeled **Likely**.
 - **Input needed from me:** unresolved questions, decisions, approvals, or missing information requiring your response.
 - **Blockers:** current impediments, their impact, and the known dependency or action needed to unblock them.
 
-Closely related questions or blockers may appear inline with the affected work instead of being repeated in a separate section. Empty input/blocker sections can be omitted. Resolved blockers and answered questions do not carry forward.
+All four sections remain visible. Empty sections contain a single `-`. Closely related questions or blockers may appear inline with the affected work instead of being repeated in another section. Resolved blockers and answered questions do not carry forward.
 
-Expect roughly 8–15 useful bullets total across the whole briefing on a busy day, with fewer when there is less to report. Related work is combined; trivial activity and speculative tasks are omitted. This is a manual invocation, not a recurring schedule.
+The output is designed as speaking notes for a daily meeting: short action/outcome bullets, one level of sub-bullets for details, and no em dashes. The report shows the briefing date rather than a retrieval preamble or “last 24 hours” label. Sources stay in a compact footer.
+
+Expect roughly 8–15 useful items across the whole briefing on a busy day, with fewer when there is less to report. Supporting sub-bullets keep each item readable. Related work is combined; trivial activity and speculative tasks are omitted. This is a manual invocation, not a recurring schedule.
 
 You can narrow the scope or request calendar-day boundaries:
 
@@ -60,7 +62,7 @@ $codex-stakeholder-digest morning for Project Atlas
 $codex-stakeholder-digest morning using the previous calendar day
 ```
 
-Morning mode includes recent activity in older chats but does not read earlier conversation content to reconstruct a backlog. Its exact window and any material coverage gaps appear in the briefing.
+Morning mode includes recent activity in older chats but does not read earlier conversation content to reconstruct a backlog. The rolling window remains the default retrieval rule. Material coverage gaps appear in a brief end note; precise window details are available on request.
 
 ## History access
 
