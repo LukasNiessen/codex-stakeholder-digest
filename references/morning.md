@@ -1,11 +1,15 @@
-# Morning briefing
+# Morning and evening briefings
 
 Invocation in Codex: `$codex-stakeholder-digest morning`. This is a manual chat command; produce the briefing when invoked. Use the shared history-access and evidence rules, with the overrides below.
 
+## Evening mode
+
+For `$codex-stakeholder-digest evening`, use the **nine elapsed hours** ending at invocation. Apply the same source, attribution, deduplication, short-line, citation and empty-section rules as morning. Start with the local date and use these four headings in order: **What I worked on**, **Next steps**, **Input needed from me**, **Blockers**. In Next steps, label an explicit follow-up **Planned** and a well-supported inference **Likely**. Preserve any stated date. A follow-up does not automatically belong to tomorrow. If the window crosses midnight, date an item when needed to keep the chronology clear. The morning-specific “yesterday” and “today” labels below apply only in morning mode.
+
 ## Use recent evidence only
 
-- Default to the rolling **24 hours ending when the request was received**. Compute the exact window and the local date meant by “today” using the user's timezone. Keep retrieval details out of the opening: display only the briefing date unless the user asks for the precise window. An explicit time range or request for the previous calendar day overrides the rolling window; calendar-day boundaries follow the user's timezone, including daylight-saving changes.
-- Cover accessible projects unless the user narrows the scope. Include older, pinned, and archived chats with activity in the window; do not filter on chat creation dates.
+- For morning, default to the rolling **24 hours ending when the request was received**. Compute the exact window and the local date meant by “today” using the user's timezone. Keep retrieval details out of the opening: display only the briefing date unless the user asks for the precise window. An explicit time range or request for the previous calendar day overrides the rolling window; calendar-day boundaries follow the user's timezone, including daylight-saving changes.
+- Cover accessible projects unless the user narrows the scope. Include older, pinned, and archived chats with activity in the window; do not filter on chat creation dates. Review workspace Git and selected project Teams/Outlook sources within precisely the same bounds.
 - Enumerate metadata as needed, but restrict substantive message and tool-result extraction to the selected window before analysis. Prefer timestamp-filtered local reads when app tools cannot bound retrieval. Ignore older records incidentally returned on a boundary page. **Do not fetch earlier turns, load prior digests, or reconstruct a historical backlog to fill gaps.** If recent evidence lacks context, qualify or omit the claim.
 - Treat earlier events quoted in a recent message as background, not newly completed work. If the window includes activity from today, label it briefly with “Today so far” or “Overnight,” as appropriate to the source time. Do not attribute it to yesterday or call shortly-after-midnight activity “This morning.” Resolve “today” and “tomorrow” relative to the source message's local date.
 
@@ -15,7 +19,7 @@ For **What I did yesterday**, include delivered outcomes, substantial progress, 
 
 For **My focus today**, prioritize explicit plans or commitments for today's local date. Then infer likely priorities from unfinished active work, requested reviews, immediate next steps, and dependencies that matter to that work. Mark each focus item with a compact **Planned** or **Likely** label. Preserve stated timing; do not add a time of day or deadline. Give the evidence-based reason for an inference only when needed, as a short sub-bullet rather than a justification sentence appended to every item. State a known blocker or dependency alongside the action; do not assign another person's work to the user.
 
-Reconcile later completions, cancellations, deferrals, and priority changes within the window. Do not turn every open issue into today's task, repeat resolved blockers as priorities, invent commitments, or pull next week's plans into today without evidence of an immediate action. Research or an assistant suggestion alone does not establish the user's plan. Omit speculative busywork and generic productivity advice. If no defensible focus can be inferred, say that the recent chats do not establish one; do not fill the gap using calendars or other external sources.
+Reconcile later completions, cancellations, deferrals, and priority changes within the window. Do not turn every open issue into today's task, repeat resolved blockers as priorities, invent commitments, or pull next week's plans into today without evidence of an immediate action. Research or an assistant suggestion alone does not establish the user's plan. Omit speculative busywork and generic productivity advice. If no defensible focus can be inferred, use the empty-section convention below. Use the selected evidence sources only.
 
 ## Surface input needs and blockers
 
@@ -29,7 +33,7 @@ If a question or blocker is tightly tied to one bullet in another section, add *
 
 Write speaking notes the user can scan five minutes before a daily meeting and read from while talking. Open with a compact date such as **Daily briefing: Thursday, 19 November**. Do not open with time ranges, chat counts, or a coverage narrative. Do not display “last 24 hours” in the briefing, including its headings and footer; the retrieval window still applies internally. Do not use em dashes anywhere in the output. Use colons, commas, parentheses, or separate bullets instead.
 
-Always show these four headings, in this order and with no parenthetical additions:
+In morning mode, always show these four headings, in this order and with no parenthetical additions:
 
 1. **What I did yesterday**
 2. **My focus today**
@@ -73,4 +77,4 @@ Example shape using fictional work:
 
 Favor useful coverage without creating a long activity log. Aim for roughly **8–15 substantive items across the whole briefing** on a busy day, including input needs and blockers. Supporting sub-bullets explain those items; they are not a reason to add many more topics or turn every item into a miniature report. Use fewer items on a quiet day and modestly more when important work warrants it. Usually 1–3 short sub-bullets are enough for an item. Do not fill a quota or add an exhaustive appendix.
 
-Keep traceability unobtrusive: reuse source markers at topic/item level and put a short chat-title/date source footer after the four sections. Use valid source-provided links when available. Retain chat IDs and exact turn timestamps in the working evidence notes, but do not print a long UUID/timestamp index unless requested. Mention material coverage gaps in a short end note; routine retrieval details need not be narrated. Do not invent content to fill a section.
+Keep traceability unobtrusive: reuse source markers at topic/item level and put a short title/date source footer after the four sections. Include account nicknames or commit hashes where applicable. Use valid source-provided links when available. Retain chat IDs and exact turn timestamps in the working evidence notes, but do not print a long UUID/timestamp index unless requested. Mention material coverage gaps in a short end note; routine retrieval details need not be narrated. Do not invent content to fill a section.
