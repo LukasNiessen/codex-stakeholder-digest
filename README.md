@@ -26,6 +26,15 @@ Type these in a Codex chat.
 | `$codex-stakeholder-digest hours 6` | Stakeholder update covering the past 6 hours. |
 | `$codex-stakeholder-digest setup` | Configure Teams and Outlook accounts for this project. |
 
+Add instructions directly after any command. For `days` and `hours`, put the count first. Everything that follows applies to that run.
+
+```text
+$codex-stakeholder-digest week keep it brief and non-technical
+$codex-stakeholder-digest morning lead with the release decision
+$codex-stakeholder-digest days 10 focus on customer impact. Use three bullets.
+$codex-stakeholder-digest setup only configure Outlook for this project
+```
+
 Natural wording such as “last 14 days”, “last 3 hours”, or an explicit date range also works. All sources use one cutoff. The default Codex scope includes accessible chats across projects. Git covers the workspace repository. Microsoft covers only accounts attached to the current project.
 
 ### Add accounts to a project

@@ -18,6 +18,10 @@ Produce an evidence-based bullet rundown of meaningful work. Favor useful covera
 | `hours 6` or “last 6 hours” | Requested positive number of hours | Stakeholder digest |
 | `setup` or `configure` | No report | Project account wizard |
 
+Every Codex command accepts optional free-form instructions. For `week`, `morning`, `evening`, `setup`, and `configure`, take **all text after the command** as the user's instructions for this run. For `days` and `hours`, consume the first argument as a positive whole-number count, then take the entire remainder as instructions. If the count is missing or invalid, ask for it. With no command, apply any instructions to the default weekly digest. Plain text, punctuation, and multiple sentences work without quotes or a separator.
+
+Apply scope and source requests when gathering evidence, and audience, language, length, emphasis, and format requests when writing. Explicit instructions override the corresponding defaults in this file and the mode references. For example, `week 3 bullets for leadership. Skip technical details.` sets a bullet limit for the seven-day report. For setup, use the instructions to tailor the wizard and skip questions the user has already answered. Keep the prose in Codex and pass only the resolved collection or setup parameters to the helper.
+
 For setup, follow [sources.md](references/sources.md). For morning and evening, read [morning.md](references/morning.md) before retrieving evidence. Its time boundary and speaking-note format take precedence over the general report defaults. An explicit range can override any preset without changing the requested report format. Preserve explicit calendar-day requests.
 
 ## Scope and dates

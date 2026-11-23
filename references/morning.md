@@ -2,6 +2,8 @@
 
 Invocation in Codex: `$codex-stakeholder-digest morning`. This is a manual chat command; produce the briefing when invoked. Use the shared history-access and evidence rules, with the overrides below.
 
+Apply any instructions following the command to this briefing. “Keep it brief” shortens the bullets within the usual sections. “Only blockers in one sentence” explicitly replaces the section layout.
+
 ## Evening mode
 
 For `$codex-stakeholder-digest evening`, use the **nine elapsed hours** ending at invocation. Apply the same source, attribution, deduplication, short-line, citation and empty-section rules as morning. Start with the local date and use these four headings in order: **What I worked on**, **Next steps**, **Input needed from me**, **Blockers**. In Next steps, label an explicit follow-up **Planned** and a well-supported inference **Likely**. Preserve any stated date. A follow-up does not automatically belong to tomorrow. If the window crosses midnight, date an item when needed to keep the chronology clear. The morning-specific “yesterday” and “today” labels below apply only in morning mode.
